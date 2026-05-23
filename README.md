@@ -1,6 +1,6 @@
 # C++ Roulette Game
 
-A terminal-based roulette game for 1–4 players built in C++.\
+A stupid-simple terminal-based roulette game for 1–4 players built in C++.\
 by กลุ่ม 17 เฮียยุทธสั่งลุย: 6815, 6822, 6831, 6844
 
 > [Demo Video](https://www.google.com)
