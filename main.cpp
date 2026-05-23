@@ -62,8 +62,7 @@ int main() {
 
         ui.showPlayers(players);
 
-        std::cout << "Play again? 1 = Yes, 0 = No: ";
-        std::cin >> playing;
+        playing = ui.askPlayAgain();
 
         std::cout << "\n";
     }

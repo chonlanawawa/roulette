@@ -58,4 +58,5 @@ public:
     void showSpin(int spinNumber);
     void showResult(int index, const Player& player, std::string resultText, int moneyGain);
     bool checkPlayerBalances(std::vector<Player>& players);
+    int askPlayAgain();
 };

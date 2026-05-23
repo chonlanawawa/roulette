@@ -180,6 +180,22 @@ void TerminalUI::showResult(int index, const Player& player, std::string resultT
               << "\n";
 }
 
+int TerminalUI::askPlayAgain() {
+    int choice;
+
+    do {
+        std::cout << "Play again? 0 = No, 1 = Yes: ";
+        std::cin >> choice;
+
+        if (choice < 0 || choice > 1) {
+            std::cout << "Invalid input. Please enter 0 or 1.\n";
+        }
+
+    } while (choice < 0 || choice > 1);
+
+    return choice;
+}
+
 bool TerminalUI::checkPlayerBalances(std::vector<Player>& players) {
     for (int i = (int)players.size() - 1; i >= 0; i--) {
         if (players[i].getMoney() <= 0) {
