@@ -1,6 +1,6 @@
 # C++ Roulette Game
 
-A terminal-based roulette game for 1–4 players built in C++.\
+A stupid-simple terminal-based roulette game for 1–4 players built in C++.\
 by กลุ่ม 17 เฮียยุทธสั่งลุย: 6815, 6822, 6831, 6844
 
 > [Demo Video](https://www.google.com)
@@ -24,7 +24,7 @@ Run the executable. The title screen and rules appear automatically.
 
 ```
 =====================================
-        SIMPLE C++ ROULETTE GAME
+          ROULETTE GAME
 =====================================
 Rule:
 - Guess number from 0 to 38
@@ -149,7 +149,7 @@ Player 1: B | Money: $250
 
 | Library | Purpose |
 |---------|---------|
-| `<iostream>` | Console input and output (`std::cin`, `std::cout`) |
+| `<iostream>` | Terminal input and output (`std::cin`, `std::cout`) |
 | `<string>` | Player name handling (`std::string`) |
 | `<vector>` | Dynamic player list (`std::vector`) |
 | `<cstdlib>` | Random number generation (`std::rand`, `std::srand`) |
