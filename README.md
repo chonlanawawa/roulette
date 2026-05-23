@@ -1,9 +1,9 @@
 # C++ Roulette Game
 
-A stupid-simple terminal-based roulette game for 1–4 players built in C++.\
+A stupid-simple terminal-based roulette game for 1–4 players built in C++\
 by กลุ่ม 17 เฮียยุทธสั่งลุย: 6815, 6822, 6831, 6844
 
-> [Demo Video](https://www.google.com)
+> [Demo Video](https://youtu.be/bKVGysgUQVI)
 
 ## Game Rules
 
@@ -168,7 +168,6 @@ roulette/
 
 - A C++ compiler with C++11 support or later
 - **Windows**: MinGW-w64 via MSYS2 (recommended)
-- **Linux/macOS**: g++ from your package manager
 
 ## Building
 
@@ -181,12 +180,6 @@ C:\msys64\ucrt64\bin\g++ main.cpp ui.cpp -o roulette
 ```
 
 Or if `g++` is already on your PATH:
-
-```
-g++ main.cpp ui.cpp -o roulette
-```
-
-### Linux / macOS
 
 ```
 g++ main.cpp ui.cpp -o roulette
@@ -206,10 +199,4 @@ After this, you can compile with just `g++` from any folder.
 
 ```
 .\roulette.exe
-```
-
-On Linux/macOS:
-
-```
-./roulette
 ```
