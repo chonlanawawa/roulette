@@ -84,11 +84,13 @@ void TerminalUI::showTitle() {
     std::cout << "Rule:\n";
     std::cout << "- Guess number from 0 to 38\n";
     std::cout << "- Even number = Black\n";
-    std::cout << "- Odd number  = Red\n";
-    std::cout << "- Starts with $200\n";
-    std::cout << "- Correct number = +$75\n";
-    std::cout << "- Correct color  = +$20\n";
-    std::cout << "- Wrong guess  = -$30\n";
+    std::cout << "- Odd number = Red\n";
+    std::cout << "- Each player starts with $200\n";
+    std::cout << "- Correct exact number guess = +$75\n";
+    std::cout << "- Correct color only guess = +$20\n";
+    std::cout << "- Wrong guess (both color and number) = -$30\n";
+    std::cout << "- A player is eliminated when their balance reaches $0\n";
+    std::cout << "- Game ends when all players are eliminated or everyone chooses to stop\n";
     std::cout << "=====================================\n\n";
 }
 

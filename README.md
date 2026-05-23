@@ -9,9 +9,9 @@ by กลุ่ม 17 เฮียยุทธสั่งลุย: 6815, 6822,
 
 - Each player guess a number from **0 to 38**
 - Even number = **Black**, Odd number = **Red**
-- Correct number guess = **+$75**
-- Correct color guess = **+$20**
-- Wrong guess = **-$30**
+- Correct exact number guess = **+$75**
+- Correct color only guess = **+$20**
+- Wrong guess (both color and number) = **-$30**
 - Each player starts with **$200**
 - A player is eliminated when their balance reaches **$0**
 - Game ends when all players are eliminated or everyone chooses to stop
@@ -20,7 +20,7 @@ by กลุ่ม 17 เฮียยุทธสั่งลุย: 6815, 6822,
 
 ### 1. Start the game
 
-Run the executable. The title screen and rules appear automatically.
+Run the executable in terminal. The title screen and rules appear automatically.
 
 ```
 =====================================
