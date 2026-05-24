@@ -28,6 +28,8 @@ int main() {
             players[i].setGuessNumber(guess);
         }
 
+        auto roundStart = std::chrono::high_resolution_clock::now();
+
         int spinNumber = std::rand() % 39;
 
         ui.showSpin(spinNumber);
@@ -54,6 +56,10 @@ int main() {
                 ui.showResult(i, players[i], "wrong", -30);
             }
         }
+
+        auto roundEnd = std::chrono::high_resolution_clock::now();
+        auto roundDuration = std::chrono::duration_cast<std::chrono::microseconds>(roundEnd - roundStart);
+        std::cout << "\n[Round computation time: " << roundDuration.count() << " us]" << std::endl;
 
         if (!ui.checkPlayerBalances(players)) {
             playing = false;

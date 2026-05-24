@@ -84,13 +84,11 @@ void TerminalUI::showTitle() {
     std::cout << "Rule:\n";
     std::cout << "- Guess number from 0 to 38\n";
     std::cout << "- Even number = Black\n";
-    std::cout << "- Odd number = Red\n";
-    std::cout << "- Each player starts with $200\n";
-    std::cout << "- Correct exact number guess = +$75\n";
-    std::cout << "- Correct color only guess = +$20\n";
-    std::cout << "- Wrong guess (both color and number) = -$30\n";
-    std::cout << "- A player is eliminated when their balance reaches $0\n";
-    std::cout << "- Game ends when all players are eliminated or everyone chooses to stop\n";
+    std::cout << "- Odd number  = Red\n";
+    std::cout << "- Starts with $200\n";
+    std::cout << "- Correct number = +$75\n";
+    std::cout << "- Correct color  = +$20\n";
+    std::cout << "- Wrong guess  = -$30\n";
     std::cout << "=====================================\n\n";
 }
 
@@ -112,9 +110,21 @@ int TerminalUI::askPlayerCount() {
 
     do {
         std::cout << "Enter number of players 1-4: ";
-        std::cin >> count;
 
-        if (count < 1 || count > 4) {
+        if (!(std::cin >> count)) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            count = -1;
+        }
+
+        auto start = std::chrono::high_resolution_clock::now();
+        bool valid = (count >= 1 && count <= 4);
+        auto end = std::chrono::high_resolution_clock::now();
+
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        std::cout << "[Validation time: " << duration.count() << " us]" << std::endl;
+
+        if (!valid) {
             std::cout << "Invalid number. Please enter 1 to 4.\n";
         }
 
@@ -137,9 +147,21 @@ int TerminalUI::askGuessNumber(const Player& player) {
 
     do {
         std::cout << player.getName() << ", guess number 0-38: ";
-        std::cin >> guess;
 
-        if (guess < 0 || guess > 38) {
+        if (!(std::cin >> guess)) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            guess = -1;
+        }
+
+        auto start = std::chrono::high_resolution_clock::now();
+        bool valid = (guess >= 0 && guess <= 38);
+        auto end = std::chrono::high_resolution_clock::now();
+
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        std::cout << "[Validation time: " << duration.count() << " us]" << std::endl;
+
+        if (!valid) {
             std::cout << "Invalid guess. Please enter 0 to 38.\n";
         }
 
